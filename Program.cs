@@ -25,7 +25,7 @@ namespace Rap_Finands
                 var k = lavKonto();
                 k.ejer = "Ejvind Møller";
                 konti.Add(k);
-
+                
                 GemTrans(k,"Opsparing",100);
                 GemTrans(konti[0],"Vandt i klasselotteriet",1000);
                 GemTrans(konti[0],"Hævet til Petuniaer",-50);
@@ -49,7 +49,7 @@ namespace Rap_Finands
 
                 Console.Write(">");
                 string valg1 = Console.ReadLine();
-                int valg = int.Parse(valg1+1);
+                int valg = int.Parse(valg1); //valg1 + 1 giver fejl da den vil + med 1 spden npr du trykker 1 så vil der stå 11 og 2 ville der stå 21.... 
                 
                 switch (valg) {
                     case 1:

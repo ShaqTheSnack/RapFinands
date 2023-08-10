@@ -49,7 +49,7 @@ namespace Rap_Finands
 
                 Console.Write(">");
                 string valg1 = Console.ReadLine();
-                int valg = int.Parse(valg1); //valg1 + 1 giver fejl da den vil + med 1 spden npr du trykker 1 så vil der stå 11 og 2 ville der stå 21.... 
+                int valg = int.Parse(valg1); //valg1 + 1 giver fejl da den vil + med 1 såden når du trykker 1 så vil der stå 11 og 2 ville der stå 21.... 
                 
                 switch (valg) {
                     case 1:
@@ -95,7 +95,8 @@ namespace Rap_Finands
             string tekst = Console.ReadLine();
             Console.Write("Beløb: ");
             float amount = float.Parse(Console.ReadLine());
-            if (GemTrans(k,tekst,amount)) {
+            if (GemTrans(k,tekst,amount)) 
+            {
                 Console.WriteLine("Transkationen blev gemt. Ny saldo på kontoen: "+findSaldo(k));
                 gem();
             } else
@@ -152,7 +153,7 @@ namespace Rap_Finands
             if (saldo + beløb < 0) return false;
             var t = new Transaktion();
             t.tekst = tekst;
-            t.amount = belob;
+            t.amount = beløb; // der stod belob og ikke beløb
             t.saldo = t.amount + saldo;
             t.dato = DateTime.Now;
             
